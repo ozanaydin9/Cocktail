@@ -1,0 +1,16 @@
+select {
+    background: white;
+    outline: none;
+    border-radius: 6px;
+    padding-left: 8px;
+    width: 250px;
+    margin-right: 20px !important;
+    font-size: 12px !important;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    height: 35px;
+}
+
+select:focus > option:checked {
+    background: #d9d9d9;
+}

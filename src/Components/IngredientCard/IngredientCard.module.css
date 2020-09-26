@@ -1,0 +1,104 @@
+.cocktailcard{
+    display: inline-block;
+    width: 250px;
+    height: 165px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin: 30px;
+}
+
+.cocktailcard a {
+    color: #655564;
+    text-decoration: none;
+}
+
+.cocktailcard a:hover {
+    text-decoration: none;
+    color: #655564;
+}
+
+.cocktailcard:hover{
+    box-shadow: 0px 3px 14px rgb(193, 147, 192);
+    transform: scale(1.1);
+}
+
+.cardImageArea {
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;
+    padding-left: 5px;
+    height: 132.5px;
+}
+.cardImage{
+    width: 100%;
+    /*object-fit: contain;*/
+    border-radius: 10px 10px 0px 0px;
+    height: inherit;
+    padding: 8px;
+    border-radius: 120px;
+}
+
+hr.horizontalLine {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #dfc4e1, rgba(0, 0, 0, 0));
+    margin: 0;
+    margin-top: 0px;
+}
+
+.cardDetailArea {
+    text-decoration: none;
+    width: 45%;
+    display: inline-block;
+    padding-top: 40px;
+    padding-right: 10px;
+}
+
+.cardimdb{
+    font-weight: bold;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.carddate{
+    font-weight: normal;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.cardgotodetail{
+    font-weight: normal;
+    font-size: 9px;
+    margin-bottom: 10px;
+    color: #d5d5d5;
+    visibility: hidden;
+}
+
+.cocktailcard:hover .cardgotodetail{
+    visibility: visible;
+}
+
+.cocktailcard:hover .cardImage{
+    filter: drop-shadow(0px 2px 2px #6d6d6d);
+    border: gray;
+}
+
+.cardname {
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 90%;
+    height: 28px;
+    margin: auto;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4px;
+    font-size: 13px;
+}

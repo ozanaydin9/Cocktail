@@ -1,0 +1,26 @@
+.button{
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    outline: none !important;
+    background: white;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px !important;
+}
+
+.button:hover{
+    background: #dfc4e1;
+    color: white;
+    transition: all .3s ease;
+}
+.buttonArea {
+    text-align: center;
+}
+
+.searchArea {
+    display: flex;
+    place-content: center;
+    padding-bottom: 20px;
+}
