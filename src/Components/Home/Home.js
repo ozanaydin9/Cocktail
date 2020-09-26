@@ -25,7 +25,7 @@ const Home = () => {
 
     return(
         <div className={`container-fluid ${styles.main}`}>
-            <div style={{maxHeight:"100%", paddingTop:44}}>
+            <div style={{maxHeight:"100%"}}>
 
                     <div onClick={handleOnClickRandom} className={styles.box}>
                         <span className={styles.boxText}>Random Cocktail</span>

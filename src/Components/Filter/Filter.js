@@ -35,12 +35,15 @@ const Filter = () => {
     }, [filterType]);
 
     async function handleGetIngredients() {
-        console.log(val)
-        console.log(type)
-        const res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?"+filterType+"="+type);
-        const data = await res.json()
-        setCocktails(data.drinks);
-
+        if(type!= "" && filterType != ""){
+            try {
+                const res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?"+filterType+"="+type);
+                const data = await res.json()
+                setCocktails(data.drinks);
+            } catch (error) {
+                console.log(error)
+            }
+        }
     }
 
     function onEnterPress (e) {
@@ -58,6 +61,11 @@ const Filter = () => {
         val = e.target.value;
         setFilterType(val)
     }
+
+    const emptyList = [
+        { name: 'Select Filter Type', value: '', readonly: true, hidden:true },
+    ];
+
     const mappedList= list.map((element) => {
             let nameList = (filterType=="g") ? element.strGlass : (filterType=="a") ? element.strAlcoholic : element.strCategory;
             let valueList = (filterType=="g") ? element.strGlass : (filterType=="a") ? element.strAlcoholic : element.strCategory;
@@ -68,8 +76,7 @@ const Filter = () => {
                 }
         }
     )
-    console.log(mappedList)
-
+    const newList = emptyList.concat(mappedList);
     return (
         <div>
             <div>
@@ -82,7 +89,7 @@ const Filter = () => {
                         <input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="g" id="g"/>
                         <label htmlFor="x">Filter by Glass</label>
                     </div>
-                    <Selectbox placeholder={"Select filter type"} optionList={mappedList} onChange={handleTypeChange}/>
+                    <Selectbox placeholder={"Select filter type"} optionList={newList} onChange={handleTypeChange}/>
                     <button onClick={handleGetIngredients} className={styles.button}>Search</button>
                 </div>
 
