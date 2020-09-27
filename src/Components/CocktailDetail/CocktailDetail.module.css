@@ -25,37 +25,41 @@
     max-width: 100%;
     max-height: 100%;
     cursor: pointer;
-    box-shadow: 0px 6px 7px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 7px 2px rgba(0, 0, 0, 0.28);
 }
 
 .cocktailTitle{
     width: 100%;
     border: 1px solid #ededed;
     border-radius: 6px 6px 0px 0px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
 }
 
-.cocktailIMDB {
-    position: relative;
-    border: 1px solid #ededed;
-    border-radius: 6px;
-    font-size: 14px;
-    padding: 6px;
-    margin-bottom:20px;
+.cocktailTitle:hover{
+    transform: scale(1.03);
 }
+
 .cocktailInfo{
     text-align: left;
     position: relative;
-    border: 1px solid #ededed;
+    border: 1px solid rgba(237, 237, 237, 0.38);
     border-radius: 6px;
     font-size: 14px;
     padding: 6px;
     margin-bottom: 20px;
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.cocktailInfo:hover{
+    transform: scale(1.03);
 }
 
 .cocktailDetailImage:hover{
-    box-shadow: 0px 6px 14px 5px rgb(193, 147, 192);
+    box-shadow: 0px 6px 14px 5px rgba(195, 195, 195, 0.56);
 
 }
 

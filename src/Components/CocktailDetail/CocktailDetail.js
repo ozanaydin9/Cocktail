@@ -70,18 +70,18 @@ const CocktailDetail = () => {
                                 <span style={{fontWeight:"bold"}}>Ingredient3 - </span>
                                 {cocktailDetail.strIngredient3} {cocktailDetail.strMeasure3}
                             </div>
+                            {cocktailDetail.strIngredient4 ?
                             <div className={styles.cocktailInfo}>
                                 <span style={{fontWeight:"bold"}}>Ingredient4 - </span>
                                 {cocktailDetail.strIngredient4} {cocktailDetail.strMeasure4}
                             </div>
+                                : null}
+                            {cocktailDetail.strIngredient5 ?
                             <div className={styles.cocktailInfo}>
                                 <span style={{fontWeight:"bold"}}>Ingredient5 - </span>
                                 {cocktailDetail.strIngredient5} {cocktailDetail.strMeasure5}
                             </div>
-                            <div className={styles.cocktailInfo}>
-                                <span style={{fontWeight:"bold"}}>Plot - </span>
-                                {cocktailDetail.Plot}
-                            </div>
+                                : null}
                         </div>
                     </div>
                 </div>
