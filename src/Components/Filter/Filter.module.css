@@ -92,7 +92,7 @@ input[type=number] {
 }
 
 .radioGroup {
-    padding-top: 7px;
+    min-width: 150px;
     float: left;
     clear: none;
 }

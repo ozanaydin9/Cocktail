@@ -82,12 +82,12 @@ const Filter = () => {
             <div>
                 <div className={styles.searchArea}>
                     <div className={styles.radioGroup}>
-                        <input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="a" id="a"/>
-                        <label htmlFor="y">Filter by alcoholic</label>
-                        <input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="c" id="c"/>
-                        <label htmlFor="z">Filter by Category</label>
-                        <input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="g" id="g"/>
-                        <label htmlFor="x">Filter by Glass</label>
+                        <div><input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="a" id="a"/>
+                        <label htmlFor="y">Filter by alcoholic</label></div>
+                        <div><input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="c" id="c"/>
+                        <label htmlFor="z">Filter by Category</label></div>
+                        <div><input onChange={handleRadioChanged} type="radio" className={styles.radio} name="x" value="g" id="g"/>
+                        <label htmlFor="x">Filter by Glass</label></div>
                     </div>
                     <Selectbox placeholder={"Select filter type"} optionList={newList} onChange={handleTypeChange}/>
                     <button onClick={handleGetIngredients} className={styles.button}>Search</button>
